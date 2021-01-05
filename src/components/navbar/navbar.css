@@ -1,0 +1,29 @@
+
+
+.navbar{
+    background-color: var(--primary);
+    color:var(--white);
+    font-size: 1.2rem;
+    
+}
+
+.navbar__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    height: 4rem;
+}
+
+.navbar__brand a{
+    font-weight: 700;
+    font-size:1.5rem;
+}
+
+.navbar__actions a{
+    margin-left: 5px;
+}
+
+.navbar__actions a:nth-last-child(2){
+    margin-right: 4px;
+}
