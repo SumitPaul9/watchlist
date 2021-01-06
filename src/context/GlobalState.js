@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
 import AppReducer from "./AppReducer";
 
 // initial state
@@ -15,8 +15,8 @@ const initialState = {
 export const GlobalContext = createContext(initialState);
 
 //provider components
-export const GlobalProvider = () =>{
-    const [state, dispatch] = useReducer(AppReducer, initialState, init);
+export const GlobalProvider = (props) =>{
+    const [state, dispatch] = useReducer(AppReducer, initialState);
 
     useEffect(() => {
         localStorage.setItem("watchlist", JSON.stringify(state.watchlist));

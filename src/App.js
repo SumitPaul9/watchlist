@@ -1,16 +1,24 @@
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
 import Navbar from './components/navbar/Navbar'
 import './App.css';
+import Card from './components/card/Card';
+import { GlobalProvider } from './context/GlobalState';
+import AddNew from './containers/addnew/AddNew';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Navbar/>
-        <Switch>
+      <GlobalProvider>
+        <Router>
+          <Navbar/>
+          <AddNew/>
+          {/* <Card/> */}
 
-        </Switch>
-      </Router>
+          <Switch>
+
+          </Switch>
+        </Router>
+      </GlobalProvider>
     </div>
   );
 }

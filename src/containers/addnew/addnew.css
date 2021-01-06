@@ -1,0 +1,12 @@
+.addnew{
+    margin-top: 20px;
+}
+
+.addnew__results{
+    margin-top:20px;
+}
+.addnew__results ul{
+    list-style: none;
+    display:flex;
+    flex-wrap: wrap;
+}
