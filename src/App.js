@@ -1,9 +1,10 @@
-import { BrowserRouter as Router, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './components/navbar/Navbar'
 import './App.css';
-import Card from './components/card/Card';
 import { GlobalProvider } from './context/GlobalState';
 import AddNew from './containers/addnew/AddNew';
+import Watched from './containers/watched/Watched';
+import WatchList from './containers/watchlist/WatchList';
 
 function App() {
   return (
@@ -11,12 +12,11 @@ function App() {
       <GlobalProvider>
         <Router>
           <Navbar/>
-          <AddNew/>
-          {/* <Card/> */}
-
-          <Switch>
-
-          </Switch>
+            <Switch>
+              <Route exact path="/add" component={AddNew}/>
+              <Route exact path="/watched" component={Watched}/>
+              <Route exact path="/watchlist" component={WatchList}/>
+            </Switch>
         </Router>
       </GlobalProvider>
     </div>
