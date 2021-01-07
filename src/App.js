@@ -5,6 +5,7 @@ import { GlobalProvider } from './context/GlobalState';
 import AddNew from './containers/addnew/AddNew';
 import Watched from './containers/watched/Watched';
 import WatchList from './containers/watchlist/WatchList';
+import Home from './containers/home/Home';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Router>
           <Navbar/>
             <Switch>
+              <Route exact path ="/" component={Home}/>
               <Route exact path="/add" component={AddNew}/>
               <Route exact path="/watched" component={Watched}/>
               <Route exact path="/watchlist" component={WatchList}/>
